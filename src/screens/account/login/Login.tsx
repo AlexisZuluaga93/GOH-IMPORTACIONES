@@ -28,11 +28,11 @@ export const Login = () => {
         </View>
 
         <View style={styles.textContent}>
-          <TextInput  placeholder='Correo Electronico'placeholderTextColor={"white"} value={email}/>
+          <TextInput  placeholder='Correo Electronico'placeholderTextColor={"white"} onChangeText={(text)=>{setEmail(text)}}/>
         </View>
 
         <View style={styles.textContent}>
-          <TextInput  placeholder='Contraseña' placeholderTextColor={"white"} value={password}/>
+          <TextInput  placeholder='Contraseña' placeholderTextColor={"white"} onChangeText={(text)=>{setPassword(text)}}/>
         </View>
 
         <View>
