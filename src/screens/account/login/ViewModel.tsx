@@ -10,17 +10,17 @@ export const ViewModel = () => {
 
  const navigation= useNavigation()
  const  signIn = async(email:string,password:string) =>{
-        try {
-         await signInWithEmailAndPassword(auth,email,password);
-         // @ts-ignore
-         navigation.navigate(screen.FacturacionStack.tab ,{
-          screen: screen.FacturacionStack.facturacion 
-         })
-          // @ts-ignore
-        } catch (error) {
-          console.log(error);
-          
-        }
+                try {
+                    await signInWithEmailAndPassword(auth,email,password);
+                    // @ts-ignore
+                      navigation.navigate(screen.FacturacionStack.tab ,{
+                      screen: screen.FacturacionStack.facturacion 
+                })
+                  // @ts-ignore
+                } catch (error) {
+                   console.log(error);
+                  
+                }
  }
 
   return{

@@ -4,28 +4,36 @@ export const styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent:"center",
-      padding:15,
-      backgroundColor:"#004443"
-  
-      
+      paddingBottom:40,
+      paddingHorizontal:10,
+      backgroundColor:"#004443",      
+    },
+    iconContainer:{
+      paddingBottom:10
     },
     icon:{
       borderRadius:60,
-      backgroundColor:"#1e8c93"
+      backgroundColor:"white"
     },
     txt:{
       fontWeight:"bold",
       textAlign:"center",
       marginBottom:15,
       color:"white",
-      fontSize:25
+      fontSize:25,
+      
     },
 
     textContent:{
         width:"100%",
         marginVertical:20,
         borderBottomWidth:1,
-        borderColor:"white"
+        borderColor:"white",
+      
+      
+    },
+    txtInputut:{
+      color:"white"
     }
   });
   

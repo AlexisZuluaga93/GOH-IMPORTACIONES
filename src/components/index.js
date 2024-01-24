@@ -1,2 +1,3 @@
 export * from './infoClientForm'
-export * from './customTextInput'
+export * from './customButton'
+export * from './modal'

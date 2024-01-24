@@ -9,26 +9,13 @@ export const styles = StyleSheet.create({
         width:"100%",
         alignContent:"center",
         justifyContent:"center",
+        backgroundColor:"#004443"
     },
     image:{
         height:400,
         width:"100%",
-        borderRadius:18,
+        borderRadius:200,
 
     },
-    button:{
-        width:"100%",
-        marginTop:10,
-        alignItems:"center",
-        justifyContent:"center"
-        
-    },
-    text:{
-        textAlign:"center",
-        marginBottom:10,
-        fontWeight:"bold",
-        fontSize:40,
-        color:"blue",
-        
-    }
+
 })

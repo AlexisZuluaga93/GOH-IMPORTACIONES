@@ -12,7 +12,7 @@ export const AccountSatck = () => {
         <stack.Screen
             name='Welcome'
             component={Welcome}
-            options={{title:"Welcome"}}
+            options={{title:null}}
         />
         <stack.Screen
             name='Login'

@@ -4,6 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {FacturacionStack} from './FacturacionStack'
 import { AccountSatck } from './AccountSatck';
 import {screen} from '../utils/ScreenName'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 export const AppNavigation = () => {
     const Tab = createBottomTabNavigator();
   return (
@@ -13,18 +15,27 @@ export const AppNavigation = () => {
               tabBarActiveTintColor: "#4DAE18",
               tabBarInactiveTintColor: "#646464",
               headerShown: false,
+      
             })}
         >
-            <Tab.Screen
+              <Tab.Screen 
                 name={screen.FacturacionStack.tab}
                 component={FacturacionStack}
-                options={{title:"Facturacion"}}
-            />
+                options={{
+                  tabBarLabel: 'Facturacion',
+                  tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="file-document-multiple-outline" color={color} size={size} />
+                  ),
+                }}/>
             <Tab.Screen 
                 name={screen.AccountStack.tab}
                 component={AccountSatck}
-                options={{title:"Cuenta"}}
-            />
+                options={{
+                  tabBarLabel: 'Cuenta',
+                  tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="account" color={color} size={size} />
+                  ),
+                }}/>
 
         </Tab.Navigator>
     </NavigationContainer>
