@@ -12,8 +12,9 @@ export const styles = StyleSheet.create({
       paddingBottom:10
     },
     icon:{
-      borderRadius:60,
-      backgroundColor:"white"
+      borderRadius:50,
+      backgroundColor:"white",
+      overflow: 'hidden',
     },
     txt:{
       fontWeight:"bold",

@@ -3,32 +3,37 @@ import {useState,useEffect} from 'react'
 import{auth} from '../../../utils/Firebase'
 import { useNavigation } from '@react-navigation/native';
 import {screen} from '../../../utils/ScreenName'
+import Toast from 'react-native-toast-message';
 export const ViewModel = () => {
- const [email , setEmail] = useState('');
- const [password,setPassword] =useState('');
 
 
+ const [showPassword,setShowPassword]= useState(false);
  const navigation= useNavigation()
  const  signIn = async(email:string,password:string) =>{
                 try {
                     await signInWithEmailAndPassword(auth,email,password);
+                    console.log("email:"+email, "password:", password);
+                    
                     // @ts-ignore
+
                       navigation.navigate(screen.FacturacionStack.tab ,{
                       screen: screen.FacturacionStack.facturacion 
                 })
                   // @ts-ignore
                 } catch (error) {
-                   console.log(error);
+                  Toast.show({
+                    type:"error",
+                    position:'bottom',
+                    text1:"Usuario o contraseña invalida"
+                  })
+                   
                   
                 }
  }
-
   return{
-    email,
-    setEmail,
-    password,
-    setPassword,
-    signIn
+    signIn,
+    showPassword,
+    setShowPassword
 
   }
 }

@@ -7,6 +7,7 @@ interface CustomButtonProps {
   title: string;
   color: string;
   onPress: () => void;
+  loading:boolean;
 
 }
 
