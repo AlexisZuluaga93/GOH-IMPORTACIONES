@@ -28,9 +28,9 @@ export const Login = () => {
   });
 
   const content = (
-    <View>
+    <View >
       <Text style={styles.txt}>BIENVENIDO</Text>
-      <View style={styles.iconContainer}>
+      <View  style={styles.iconContainer}>
         <Icon
           type='material-community'
           name='account'
@@ -48,6 +48,8 @@ export const Login = () => {
           onChangeText={(text) => { formik.setFieldValue("email", text) }}
           value={formik.values.email}
           errorMessage={formik.errors.email}
+          leftIcon={<Icon type='material-community'name='email-outline' iconStyle={styles.leftIcon}/>}
+          
         />
       
 
@@ -57,14 +59,32 @@ export const Login = () => {
           placeholder='Contraseña'
           placeholderTextColor={"white"}
           onChangeText={(text) => { formik.setFieldValue("password", text) }}
-          secureTextEntry={true}
+          secureTextEntry={showPassword}
           value={formik.values.password}
           errorMessage={formik.errors.password}
+          leftIcon={<Icon type='material-community'name='lock-outline'iconStyle={styles.leftIcon}/>}
+          rightIcon={
+            showPassword ? 
+            <Icon 
+              type='material-community'
+              name='eye-outline'
+              onPress={()=>setShowPassword(prevState => !prevState)}
+              iconStyle={styles.rightIcon}
+            />
+             : 
+            <Icon
+              type='material-community'
+              name='eye-off-outline'
+              onPress={()=>setShowPassword(prevState => !prevState)}
+              iconStyle={styles.rightIcon}
+            />
+            
+          }
         />
       
       <CustomButton
         color='white'
-        title="Iniciar sesion"
+        title="INICIAR SESION"
         onPress={formik.handleSubmit}
         loading={formik.isSubmitting}
       />

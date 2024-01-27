@@ -12,10 +12,7 @@ export const ViewModel = () => {
  const  signIn = async(email:string,password:string) =>{
                 try {
                     await signInWithEmailAndPassword(auth,email,password);
-                    console.log("email:"+email, "password:", password);
-                    
                     // @ts-ignore
-
                       navigation.navigate(screen.FacturacionStack.tab ,{
                       screen: screen.FacturacionStack.facturacion 
                 })

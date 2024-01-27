@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
       backgroundColor:"#004443",      
     },
     iconContainer:{
-      paddingBottom:10
+      marginBottom:40
     },
     icon:{
       borderRadius:50,
@@ -34,6 +34,14 @@ export const styles = StyleSheet.create({
       
     },
     txtInputut:{
+      color:"white",
+      
+    },
+    leftIcon:{
+      color:"white",
+      marginRight:10
+    },
+    rightIcon:{
       color:"white"
     }
   });
