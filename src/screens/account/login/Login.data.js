@@ -4,7 +4,11 @@ export function initialValues(){
     return{
         email:"",
         password:"",
-        rol:""
+        rol:"",
+        name:"",
+        lastName:"",
+        telefono:"",
+        cedula:"",
     }
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  TextInput,
   ScrollView,
   Platform,
   KeyboardAvoidingView,
@@ -23,7 +22,8 @@ export const Login = () => {
     validateOnChange: false,
     onSubmit: async(formValue) => {
       console.log(formValue);
-      signIn(formValue.email, formValue.password);
+      signIn(formValue.email, formValue.password,formValue);
+      
     },
   });
 

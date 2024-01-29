@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Welcome ,Login} from '../screens';
+import { Welcome ,Login,Usuario} from '../screens';
 
 
 
@@ -18,6 +18,11 @@ export const AccountSatck = () => {
             name='Login'
             component={Login}
             options={{title:"Inicio"}}
+        />
+        <stack.Screen
+            name='Usuario'
+            component={Usuario}
+            options={{title:"REGISTRO"}}
         />
     </stack.Navigator>
   )

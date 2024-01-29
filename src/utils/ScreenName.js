@@ -1,7 +1,8 @@
 const AccountStack ={
     tab:'InicioTab',
     inicio:'Inicio',
-    login:"Login"
+    login:"Login",
+    usuario:"Usuario"
 }
 
 const FacturacionStack={

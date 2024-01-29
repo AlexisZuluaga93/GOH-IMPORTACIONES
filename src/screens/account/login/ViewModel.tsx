@@ -9,13 +9,24 @@ export const ViewModel = () => {
 
  const [showPassword,setShowPassword]= useState(false);
  const navigation= useNavigation()
- const  signIn = async(email:string,password:string) =>{
+ const  signIn = async(email:string,password:string, formValue:any) =>{
                 try {
                     await signInWithEmailAndPassword(auth,email,password);
-                    // @ts-ignore
+                    console.log(formValue.rol);
+                    
+                    if(formValue.rol!=""){
+                      // @ts-ignore
                       navigation.navigate(screen.FacturacionStack.tab ,{
-                      screen: screen.FacturacionStack.facturacion 
-                })
+                        screen: screen.FacturacionStack.facturacion,
+                       // params:{email,password}
+                  })
+                    } else{
+                      // @ts-ignore
+                           navigation.navigate(screen.AccountStack.tab ,{
+                           screen: screen.AccountStack.usuario,
+                           params:{email,password}
+                    }
+                    )}
                   // @ts-ignore
                 } catch (error) {
                   Toast.show({
@@ -30,7 +41,7 @@ export const ViewModel = () => {
   return{
     signIn,
     showPassword,
-    setShowPassword
+    setShowPassword,
 
   }
 }
